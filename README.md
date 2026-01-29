@@ -62,7 +62,7 @@ Our telemetry implementation prioritizes user autonomy through three architectur
 > 
 
 ---
-##🔮 Backend Setup (Google Cloud Shrine)
+## 🔮 Backend Setup (Google Cloud Shrine)
 
 To replicate the data collection environment, you must deploy the Google Apps Script provided in `code.gs`:
 
@@ -90,11 +90,9 @@ The system is composed of three synchronized Ren'Py script files:
 | **`scripts.rpy`** | **The Interface.** The narrative layer that triggers specific probe events, handles the "AI Interrogation" logic, and manages the initial "Data Consent" flow. |
 | **`data_policy_ui.rpy`** | **The Ethics Layer.** Provides a visual, clickable "Link Status" toggle, ensuring consent is reversible at any time. |
 
-### Data Payload Example (JSON)
+Data Payload Example
 The system sends asynchronous POST requests to a Google Apps Script endpoint:
 
-
-## 🛠️ Technical Architecture
 
 The system utilizes a **Serverless Architecture** (Google Apps Script + Sheets) to ensure zero-cost deployment, high scalability, and thread-safe asynchronous execution.
 
