@@ -62,6 +62,22 @@ Our telemetry implementation prioritizes user autonomy through three architectur
 > 
 
 ---
+## Backend Setup (Google Cloud Shrine)
+
+To replicate the data collection environment, you must deploy the Google Apps Script provided in `code.gs`:
+
+1.  **Create Spreadsheet:** Create a new Google Sheet and name it `Neon_Hearts_Telemetry`.
+2.  **Access Script Editor:** Go to `Extensions` > `Apps Script`.
+3.  **Paste Code:** Replace the default code with the contents of `code.gs` from this repository.
+4.  **Header Setup:** Ensure the first row of your sheet has the following headers to match the ALETEIA schema:
+    * `A1: Server Timestamp`, `B1: Client Timestamp`, `C2: Player ID`, `D2: Event Type`, `E2: Details (JSON)`
+5.  **Deploy as Web App:** * Click `Deploy` > `New Deployment`.
+    * Select `Web App`.
+    * **Execute as:** `Me`.
+    * **Who has access:** `Anyone` (This is required for Ren'Py to send data without OAuth).
+6.  **Connect:** Copy the `Web App URL` and paste it into the `TELEMETRY_URL` variable in `telemetry.rpy`.
+
+---
 
 ## 🛠 Technical Architecture
 
