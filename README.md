@@ -62,7 +62,7 @@ Our telemetry implementation prioritizes user autonomy through three architectur
 > 
 
 ---
-## Backend Setup (Google Cloud Shrine)
+##🔮 Backend Setup (Google Cloud Shrine)
 
 To replicate the data collection environment, you must deploy the Google Apps Script provided in `code.gs`:
 
